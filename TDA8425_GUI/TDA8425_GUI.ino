@@ -92,7 +92,7 @@ void encHandler_left(void) {    // Поворот влево
     }
     update(menu_pointer); // Выгружаем новые данные
   } else {
-    menu_pointer = constrain(menu_pointer + 1, 0, 3); // Или двигаем указатель меню
+    menu_pointer = constrain(menu_pointer - 1, 0, 3); // Или двигаем указатель меню
   }
   drawMenu(); // Обновляем картинку
 }
@@ -108,7 +108,7 @@ void encHandler_right(void) { // см. поворот влево
     }
     update(menu_pointer);
   } else {
-    menu_pointer = constrain(menu_pointer - 1, 0, 3);
+    menu_pointer = constrain(menu_pointer + 1, 0, 3);
   }
   drawMenu();
 }
